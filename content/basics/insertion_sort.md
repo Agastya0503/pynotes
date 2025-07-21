@@ -1,9 +1,9 @@
 ---
-title: Untitled
+title: Insertion Sort
 date: 2025-07-21
 author: Your Name
-cell_count: 32
-score: 30
+cell_count: 38
+score: 35
 ---
 
 ```python
@@ -182,12 +182,62 @@ else:
 
 
 ```python
-
+ except ValueError:
+        print("Invalid input. Please enter a number.")
 ```
 
 
 ```python
+def main_menu():
+    tasks = load_tasks()
+    while True:
+```
 
+
+```python
+ print("\n=== Task Manager Menu ===")
+        print("1. Add Task")
+        print("2. View Tasks")
+        print("3. Mark Task as Complete")
+        print("4. Delete Task")
+        print("5. Save & Exit")
+```
+
+
+```python
+ choice = input("Choose an option (1-5): ").strip()
+```
+
+
+```python
+if choice == '1':
+            add_task(tasks)
+        elif choice == '2':
+            view_tasks(tasks)
+        elif choice == '3':
+            mark_complete(tasks)
+```
+
+
+```python
+elif choice == '4':
+            delete_task(tasks)
+        elif choice == '5':
+            save_tasks(tasks)
+            print("Goodbye. Tasks saved.")
+            break
+```
+
+
+```python
+ else:
+            print("Invalid choice. Please try again.")
+```
+
+
+```python
+if __name__ == "__main__":
+    main_menu()
 ```
 
 
@@ -202,4 +252,4 @@ else:
 
 
 ---
-**Score: 30**
+**Score: 35**
