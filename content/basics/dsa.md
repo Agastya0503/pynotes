@@ -313,7 +313,7 @@ if __name__ == "__main__":
 
 ```python
  else:
-            print("❌ Invalid choice. Try again.")
+            print(" Invalid choice. Try again.")
 ```
 
 
